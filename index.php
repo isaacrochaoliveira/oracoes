@@ -30,10 +30,31 @@ require_once('conexao.php');
                     </div>
                 </div>
                 <div class="row mt-4">
-                    <button class="btn btn-primary">Sing-in</button>
+                    <button class="btn btn-primary" type="submit">Sing-in</button>
                 </div>
             </div>
         </div>
+        <?php
+            if (isset($_POST['email'])) {
+                $email = addslashes($_POST['email']);
+                $senha = addslashes($_POST['senha']);
+                if (!(empty($email) && empty($senha))) {
+                    echo "Informe seu dados de Login!";
+                } else {
+                    $query = $pdo->query("SELECT * FROM clientes WHERE email = '$email' AND senha = '$senha'");
+                    $res = $query->fetchAll(PDO::FETCH_ASSOC);
+                    if (count($res) > 0) {
+                        if (!isset($_SESSION)) {
+                            session_start();
+                        }
+
+                        $_SESSION['nome'] = $res[0]['nome'];
+                         
+                    }
+                }
+            }
+            
+        ?>
     </form>
 </body>
 </html>
