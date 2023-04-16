@@ -1,11 +1,11 @@
 <?php
 
-if (!$_SESSION) {
+if (!isset($_SESSION)) {
     session_start();
 }
 
-if (!$_SESSION['id']) {
-    echo "<script>location.href = '../'";
+if (!isset($_SESSION['id'])) {
+    echo "<script>location.href = '../index.php'</script>";
 }
 
 ?>

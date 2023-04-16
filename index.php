@@ -38,7 +38,7 @@ require_once('conexao.php');
             if (isset($_POST['email'])) {
                 $email = addslashes($_POST['email']);
                 $senha = addslashes($_POST['senha']);
-                if (!(empty($email) && empty($senha))) {
+                if ((empty($email) && empty($senha))) {
                     echo "Informe seu dados de Login!";
                 } else {
                     $query = $pdo->query("SELECT * FROM cliente WHERE email = '$email' AND senha = '$senha'");
@@ -47,12 +47,14 @@ require_once('conexao.php');
                         if (!isset($_SESSION)) {
                             session_start();
                         }
-
+                        $_SESSION['id'] = $res[0]['id'];
                         $_SESSION['nome'] = $res[0]['nome'];
                         $_SESSION['email'] = $res[0]['email'];
                         $_SESSION['senha'] = $res[0]['senha'];
 
-                        echo "<script>location.href= 'myp/'";
+                        echo "<script>location.href= 'myp/'</script>";
+                    } else {
+                        echo "Senha e/ou Email inválidos!";
                     }
                 }
             }

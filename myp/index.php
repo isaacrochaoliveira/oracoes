@@ -1,6 +1,7 @@
 <?php
 
 require_once('../conexao.php');
+require_once('../config.php');
 require_once('../protect.php');
 @session_start();
 ?>
@@ -13,6 +14,6 @@ require_once('../protect.php');
     <title>Sistema de Orações</title>
 </head>
 <body>
-    
+    <h1><?=$_SESSION['nome']?> <a href="<?=URL_BASE.'/logout'?>">SAIR</a></h1>
 </body>
 </html>
