@@ -1,0 +1,24 @@
+@charset "UTF8";
+
+@font-face {
+    font-family: 'Allura';
+    src: url('../font/Allura/Allura-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Cookie';
+    src: url('../font/Cookie/Cookie-Regular.ttf');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.allura {
+    font-family: 'Allura';
+}
+
+.cookie {
+    font-family: 'Cookie';
+}

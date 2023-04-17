@@ -10,13 +10,14 @@ require_once('conexao.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/global.css">
     <title>Login</title>
 </head>
 <body class="bg-dark text-light">
     <form method="post" action="#" class="text-center w-50 mx-auto">
-        <div class="bg-white text-dark rounded-3 my-5 py-5">
+        <div class="bg-white text-dark rounded-3 py-5" style="margin: 20% 0px">
             <div>
-                <h1>Sistema de Orações</h1>
+                <h1 class="cookie">Sistema de Orações</h1>
             </div>
             <div class="mx-5 mt-3">
                 <div class="row">
@@ -30,7 +31,8 @@ require_once('conexao.php');
                     </div>
                 </div>
                 <div class="row mt-4">
-                    <button class="btn btn-primary" type="submit">Sing-in</button>
+                    <button class="btn btn-primary w-25 mx-2" type="submit">Sing-up</button>
+                    <button class="btn btn-secondary w-25" onclick="cad()">Sing-in</button>
                 </div>
             </div>
         </div>
