@@ -21,7 +21,7 @@ require_once('../protect.php');
 
 <body>
     <section class="section__background-pray">
-        <nav class="navbar navbar-expand-lg black-transparent">
+        <nav class="navbar navbar-expand-lg black-transparent py-3">
             <div class="container-fluid">
                 <a class="navbar-brand allura text-light" style="font-size: 26px" href="#"><?=NS?></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

@@ -2,7 +2,7 @@
 
 
 .section__background-pray {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../imgs/convertidas/background.webp');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../imgs/convertidas/background.webp');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;
@@ -23,6 +23,5 @@
 }
 
 .black-transparent {
-    color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
 }
