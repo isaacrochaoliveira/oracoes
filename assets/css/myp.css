@@ -2,15 +2,15 @@
 
 
 .section__background-pray {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../imgs/convertidas/background.webp');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../imgs/convertidas/background.webp');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;
     background-attachment: fixed;
-    padding: 180px;
 }
 
 .white {
+    padding: 180px;
     color: white;
 }
 
@@ -20,4 +20,9 @@
 
 .letter-spacing {
     letter-spacing: 1.6px;
+}
+
+.black-transparent {
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
 }

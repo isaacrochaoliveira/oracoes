@@ -20,39 +20,39 @@ require_once('../protect.php');
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand allura" style="font-size: 26px" href="#"><?=NS?></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Orações</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pastores</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Perfil
-                        </a>
-                        <ul class="dropdown-menu  bg-dark">
-                            <li><a class="dropdown-item text-light" href="#">Editar Perfil</a></li>
-                            <li><a class="dropdown-item text-light" href="#">Visualizar Perfil</a></li>
-                            <li class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-light" href="#">Log-out</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
     <section class="section__background-pray">
+        <nav class="navbar navbar-expand-lg black-transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand allura text-light" style="font-size: 26px" href="#"><?=NS?></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Orações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Pastores</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Perfil
+                            </a>
+                            <ul class="dropdown-menu  bg-dark">
+                                <li><a class="dropdown-item text-light" href="#">Editar Perfil</a></li>
+                                <li><a class="dropdown-item text-light" href="#">Visualizar Perfil</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-light" href="#">Log-out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         <div class="white">
             <h1 class="cookie size-65">Um centro de oração para um orarmos pelos outros</h1>
             <hr>
