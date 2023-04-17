@@ -1,1 +1,23 @@
 @charset "UTF8";
+
+
+.section__background-pray {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../imgs/convertidas/background.webp');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    background-attachment: fixed;
+    padding: 180px;
+}
+
+.white {
+    color: white;
+}
+
+.size-65 {
+    font-size: 65px;
+}
+
+.letter-spacing {
+    letter-spacing: 1.6px;
+}

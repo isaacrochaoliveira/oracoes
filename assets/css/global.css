@@ -10,6 +10,11 @@
     src: url('../font/Cookie/Cookie-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'Roboto-Condensed';
+    src: url('../font/Roboto_Condensed/RobotoCondensed-Regular.ttf');
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -21,6 +26,10 @@
 
 .cookie {
     font-family: 'Cookie';
+}
+
+.roboto-condensed {
+    font-family: 'Roboto-Condensed';
 }
 
 .size-50 {
