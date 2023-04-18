@@ -76,10 +76,13 @@ require_once('../protect.php');
                                 $nome_sabio = $res[0]['nome_sabio'];
                                 $citacao = $res[0]['texto_sabio'];
                                 ?>
-                                    <div class="carousel-item active text-center" style="padding: 0px 200px">
-                                        <h5 class="roboto-condensed size-35"><?=$nome_sabio?></h5>
-                                        <div>
-                                            <p class="roboto-condensed"><?=$citacao?></p>
+                                    <div class="carousel-item active">
+                                        <img src="<?=ASSETS.'convertidas/citacoes_back.webp'?>" class="d-block w-100">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5 class="roboto-condensed size-35"><?=$nome_sabio?></h5>
+                                            <div>
+                                                <p class="roboto-condensed"><?=$citacao?></p>
+                                            </div>
                                         </div>
                                     </div>
                                 <?php
