@@ -70,23 +70,19 @@ require_once('../protect.php');
                         $query = $pdo->query("SELECT * FROM citacoes where id_citacao = '1';");
                         $res = $query->fetchAll(PDO::FETCH_ASSOC);
                         if (count($res) > 0) {
-                            for ($i = 0; $i < count($res); $i++) {
-                                foreach ($res[$i] as $key => $value) {
-                                }
-                                $nome_sabio = $res[0]['nome_sabio'];
-                                $citacao = $res[0]['texto_sabio'];
-                                ?>
-                                    <div class="carousel-item active">
-                                        <img src="<?=ASSETS.'/imgs/convertidas/citacoes_back.webp'?>" class="d-block w-100">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5 class="roboto-condensed size-35"><?=$nome_sabio?></h5>
-                                            <div>
-                                                <p class="roboto-condensed"><?=$citacao?></p>
-                                            </div>
-                                        </div>
+                            $nome_sabio = $res[0]['nome_sabio'];
+                            $citacao = $res[0]['texto_sabio'];
+                            ?>
+                            <div class="carousel-item active">
+                                <img src="<?=ASSETS.'/imgs/convertidas/citacoes_back.webp'?>" class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="roboto-condensed size-35"><?=$nome_sabio?></h5>
+                                    <div>
+                                        <p class="roboto-condensed"><?=$citacao?></p>
                                     </div>
-                                <?php
-                            }
+                                </div>
+                            </div>
+                            <?php
                         }
                     ?>
                 </div>
@@ -95,23 +91,19 @@ require_once('../protect.php');
                         $query = $pdo->query("SELECT * FROM citacoes where id_citacao = '2';");
                         $res = $query->fetchAll(PDO::FETCH_ASSOC);
                         if (count($res) > 0) {
-                            for ($i = 0; $i < count($res); $i++) {
-                                foreach ($res[$i] as $key => $value) {
-                                }
-                                $nome_sabio = $res[0]['nome_sabio'];
-                                $citacao = $res[0]['texto_sabio'];
-                                ?>
-                                    <div class="carousel-item">
-                                        <img src="<?=ASSETS.'/imgs/convertidas/citacoes_back.webp'?>" class="d-block w-100">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5 class="roboto-condensed size-35"><?=$nome_sabio?></h5>
-                                            <div>
-                                                <p class="roboto-condensed"><?=$citacao?></p>
-                                            </div>
-                                        </div>
+                            $nome_sabio = $res[0]['nome_sabio'];
+                            $citacao = $res[0]['texto_sabio'];
+                        ?>
+                            <div class="carousel-item">
+                                <img src="<?=ASSETS.'/imgs/convertidas/citacoes_back.webp'?>" class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="roboto-condensed size-35"><?=$nome_sabio?></h5>
+                                    <div>
+                                        <p class="roboto-condensed"><?=$citacao?></p>
                                     </div>
-                                <?php
-                            }
+                                </div>
+                            </div>
+                        <?php
                         }
                     ?>
                 </div>
@@ -120,23 +112,19 @@ require_once('../protect.php');
                         $query = $pdo->query("SELECT * FROM citacoes where id_citacao = '3';");
                         $res = $query->fetchAll(PDO::FETCH_ASSOC);
                         if (count($res) > 0) {
-                            for ($i = 0; $i < count($res); $i++) {
-                                foreach ($res[$i] as $key => $value) {
-                                }
-                                $nome_sabio = $res[0]['nome_sabio'];
-                                $citacao = $res[0]['texto_sabio'];
-                                ?>
-                                    <div class="carousel-item">
-                                        <img src="<?=ASSETS.'/imgs/convertidas/citacoes_back.webp'?>" class="d-block w-100">
-                                        <div class="carousel-caption d-none d-md-block">
-                                            <h5 class="roboto-condensed size-35"><?=$nome_sabio?></h5>
-                                            <div>
-                                                <p class="roboto-condensed"><?=$citacao?></p>
-                                            </div>
-                                        </div>
+                            $nome_sabio = $res[0]['nome_sabio'];
+                            $citacao = $res[0]['texto_sabio'];
+                        ?>
+                            <div class="carousel-item">
+                                <img src="<?=ASSETS.'/imgs/convertidas/citacoes_back.webp'?>" class="d-block w-100">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5 class="roboto-condensed size-35"><?=$nome_sabio?></h5>
+                                    <div>
+                                        <p class="roboto-condensed"><?=$citacao?></p>
                                     </div>
-                                <?php
-                            }
+                                </div>
+                            </div>
+                        <?php
                         }
                     ?>
                 </div>
