@@ -66,15 +66,26 @@ require_once('../protect.php');
             </div>
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="..." class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
-                    </div>
+                    <?php
+                        $query = $pdo->query("SELECT * FROM citacoes;");
+                        $res = $query->fetchAll(PDO::FETCH_ASSOC);
+                        if (count($res) > 0) {
+                            for ($i = 0; $i < count($res); $i++) {
+                                foreach ($res[$i] as $key => $value) {
+                                }
+                                $nome_sabio = $res[$i]['nome_sabio'];
+                                $citacao = $res[$i]['texto_sabio'];
+                                ?>
+                                    <div class="carousel-item active text-center">
+                                        <h5><?=$nome_sabio?></h5>
+                                        <div>
+                                            <p><?=$citacao?></p>
+                                        </div>
+                                    </div>
+                                <?php
+                            }
+                        }
+                    ?>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
