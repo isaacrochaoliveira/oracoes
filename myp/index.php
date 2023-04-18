@@ -136,6 +136,19 @@ require_once('../protect.php');
             </div>
         </div>
     </section>
+    <section class="mx-3">
+        <div class="d-flex flex-wrap">
+            <div class="w-50" style="padding-left: 50px">
+                
+                <h2 class="roboto-condensed-light">Tiago 5:16</h2>
+                <hr>
+                <p class="roboto-condensed line-height">Confessai as vossas culpas uns aos outros, e orai uns pelos outros, para que sareis. A oração feita por um justo pode muito em seus efeitos</p>
+            </div>
+            <div class="w-50 bg-dark">
+            
+            </div>
+        </div>
+    </section>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
