@@ -59,7 +59,7 @@ require_once('../protect.php');
             <p class="letter-spacing roboto-condensed">Vamos orar uns pelos outros, para podermos chamar a atenção de Deus</p>
         </div>
     </section>
-    <section class="mx-3">
+    <section class="mx-3 pb-5">
         <div class="pt-5">
             <div class="my-3">
                 <h2 class="cookie size-50">Citações de alguns sábios</h2>
@@ -67,19 +67,63 @@ require_once('../protect.php');
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner">
                     <?php
-                        $query = $pdo->query("SELECT * FROM citacoes;");
+                        $query = $pdo->query("SELECT * FROM citacoes where id_citacao = '1';");
                         $res = $query->fetchAll(PDO::FETCH_ASSOC);
                         if (count($res) > 0) {
                             for ($i = 0; $i < count($res); $i++) {
                                 foreach ($res[$i] as $key => $value) {
                                 }
-                                $nome_sabio = $res[$i]['nome_sabio'];
-                                $citacao = $res[$i]['texto_sabio'];
+                                $nome_sabio = $res[0]['nome_sabio'];
+                                $citacao = $res[0]['texto_sabio'];
                                 ?>
-                                    <div class="carousel-item active text-center">
-                                        <h5><?=$nome_sabio?></h5>
+                                    <div class="carousel-item active text-center" style="padding: 0px 200px">
+                                        <h5 class="roboto-condensed size-35"><?=$nome_sabio?></h5>
                                         <div>
-                                            <p><?=$citacao?></p>
+                                            <p class="roboto-condensed"><?=$citacao?></p>
+                                        </div>
+                                    </div>
+                                <?php
+                            }
+                        }
+                    ?>
+                </div>
+                <div class="carousel-inner">
+                    <?php
+                        $query = $pdo->query("SELECT * FROM citacoes where id_citacao = '2';");
+                        $res = $query->fetchAll(PDO::FETCH_ASSOC);
+                        if (count($res) > 0) {
+                            for ($i = 0; $i < count($res); $i++) {
+                                foreach ($res[$i] as $key => $value) {
+                                }
+                                $nome_sabio = $res[0]['nome_sabio'];
+                                $citacao = $res[0]['texto_sabio'];
+                                ?>
+                                    <div class="carousel-item text-center" style="padding: 0px 200px">
+                                        <h5 class="roboto-condensed size-35"><?=$nome_sabio?></h5>
+                                        <div>
+                                            <p class="roboto-condensed"><?=$citacao?></p>
+                                        </div>
+                                    </div>
+                                <?php
+                            }
+                        }
+                    ?>
+                </div>
+                <div class="carousel-inner">
+                    <?php
+                        $query = $pdo->query("SELECT * FROM citacoes where id_citacao = '3';");
+                        $res = $query->fetchAll(PDO::FETCH_ASSOC);
+                        if (count($res) > 0) {
+                            for ($i = 0; $i < count($res); $i++) {
+                                foreach ($res[$i] as $key => $value) {
+                                }
+                                $nome_sabio = $res[0]['nome_sabio'];
+                                $citacao = $res[0]['texto_sabio'];
+                                ?>
+                                    <div class="carousel-item text-center" style="padding: 0px 200px">
+                                        <h5 class="roboto-condensed size-35"><?=$nome_sabio?></h5>
+                                        <div>
+                                            <p class="roboto-condensed"><?=$citacao?></p>
                                         </div>
                                     </div>
                                 <?php
