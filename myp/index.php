@@ -61,9 +61,6 @@ require_once('../protect.php');
     </section>
     <section class="mx-3 pb-5">
         <div class="pt-5">
-            <div class="my-3">
-                <h2 class="cookie size-50">Citações de alguns sábios</h2>
-            </div>
             <div id="carouselExample" class="carousel slide">
                 <div class="carousel-inner">
                     <?php
