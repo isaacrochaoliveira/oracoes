@@ -138,14 +138,20 @@ require_once('../protect.php');
     </section>
     <section class="mx-3">
         <div class="d-flex flex-wrap">
-            <div class="w-50" style="padding-left: 50px">
-                
-                <h2 class="roboto-condensed-light">Tiago 5:16</h2>
-                <hr>
-                <p class="roboto-condensed line-height">Confessai as vossas culpas uns aos outros, e orai uns pelos outros, para que sareis. A oração feita por um justo pode muito em seus efeitos</p>
+            <div class="w-50" style="padding: 80px 0px 0px 50px">
+                <div class="pb-4">
+                    <h2 class="roboto-condensed-light">Tiago 5:16</h2>
+                    <hr>
+                    <p class="roboto-condensed line-height">Confessai as vossas culpas uns aos outros, e orai uns pelos outros, para que sareis. A oração feita por um justo pode muito em seus efeitos</p>
+                </div>
+                <div>
+                    <h2 class="roboto-condensed-light">João 13:14</h2>
+                    <hr>
+                    <p class="roboto-condensed line-height">Ora, se eu, Senhor e Mestre, vos lavei os pés, vós deveis também lavar os pés uns aos outros</p>
+                </div>
             </div>
-            <div class="w-50 bg-dark">
-            
+            <div class="w-50 text-center">
+                <img src="<?=ASSETS.'imgs/convertidas/orai_pelos_outros.webp'?>" alt="Imagem da Bíblia Sagrada" style="border: 7px solid #000; border-radius: 2%">
             </div>
         </div>
     </section>
