@@ -157,7 +157,17 @@ require_once('../protect.php');
     </section>
     <section class="py-5 px-5 bg-dark text-light">
         <div class="">
-            <h2 class="cookie size-50">Pastores & Pastoras</h2>
+            <h2 class="cookie size-50">Alguns usuários</h2>
+        </div>
+        <div class="border">
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
         </div>
     </section>
 </body>
