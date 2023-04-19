@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 18-Abr-2023 às 01:46
+-- Tempo de geração: 19-Abr-2023 às 23:03
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.2.0
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `citacoes` (
   `citacoes_curtidas` int DEFAULT '0',
   `citacoes_comentarios` int DEFAULT '0',
   PRIMARY KEY (`id_citacao`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `citacoes`
@@ -55,19 +55,23 @@ INSERT INTO `citacoes` (`id_citacao`, `nome_sabio`, `texto_sabio`, `citacoes_cur
 DROP TABLE IF EXISTS `cliente`;
 CREATE TABLE IF NOT EXISTS `cliente` (
   `id` tinyint NOT NULL AUTO_INCREMENT,
+  `foto` varchar(100) DEFAULT 'sem-foto.webp',
   `nome` varchar(100) NOT NULL,
+  `bio` text,
   `email` varchar(100) DEFAULT NULL,
   `senha` varchar(70) NOT NULL,
+  `whatsapp` varchar(100) DEFAULT NULL,
+  `DDD` tinyint DEFAULT '55',
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `cliente`
 --
 
-INSERT INTO `cliente` (`id`, `nome`, `email`, `senha`) VALUES
-(1, 'Isaac', 'isaak.rocha137@gmail.com', '1234567');
+INSERT INTO `cliente` (`id`, `foto`, `nome`, `bio`, `email`, `senha`, `whatsapp`, `DDD`) VALUES
+(1, 'sem-foto.webp', 'Isaac', 'Olá. Eu me chamo Isaac e estou aqui para fazer meus pedimos de oração', 'isaak.rocha137@gmail.com', '1234567', '62996567587', 55);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
