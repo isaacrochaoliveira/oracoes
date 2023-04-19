@@ -160,14 +160,28 @@ require_once('../protect.php');
             <h2 class="cookie size-50">Alguns usuários</h2>
         </div>
         <div class="border">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+            <?php
+                $query = $pdo->query("SELECT * FROM cliente LIMIT 15;");
+                $res = $query->fetchAll(PDO::FETCH_ASSOC);
+                if (count($res) > 0) {
+                    for ($i = 0;$i < count($res); $i++) {
+                        foreach ($res[$i] as $key => $value) {
+                        }
+                        $nome = $res[$i]['nome'];
+                        $perfil = $res[$i]['foto'];
+                        ?>
+                            <div class="card" style="width: 18rem;">
+                                <img src="<?=ASSETS."imgs/convertidas/$perfil"?>" class="card-img-top" alt="Foto de Usuário do Cliente">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?=$nome?></h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        <?php
+                    }
+                }
+            ?>
         </div>
     </section>
 </body>
