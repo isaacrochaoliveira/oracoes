@@ -1,7 +1,7 @@
 <?php
 
 require_once('conexao.php');
-
+require_once('config.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -32,13 +32,13 @@ require_once('conexao.php');
                     </div>
                 </div>
                 <div class="row mt-4">
-                    <button class="btn btn-primary w-25 mx-2" type="submit">Sing-up</button>
-                    <button class="btn btn-secondary w-25" onclick="cad()">Sing-in <i class="bi bi-arrow-right"></i></button>
+                    <button name="btnSalvar" class="btn btn-primary w-25 mx-2" type="submit">Sing-up</button>
+                    <a class="btn btn-secondary w-25" href="<?=URL_BASE.'cadastro.php'?>">Sing-in <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
         </div>
         <?php
-            if (isset($_POST['email'])) {
+            if (isset($_POST['btnSalvar']) ) {
                 $email = addslashes($_POST['email']);
                 $senha = addslashes($_POST['senha']);
                 if ((empty($email) && empty($senha))) {
@@ -61,7 +61,7 @@ require_once('conexao.php');
                     }
                 }
             }
-            
+
         ?>
     </form>
 </body>

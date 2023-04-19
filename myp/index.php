@@ -46,7 +46,7 @@ require_once('../protect.php');
                                 <li><a class="dropdown-item text-light" href="#">Editar Perfil</a></li>
                                 <li><a class="dropdown-item text-light" href="#">Visualizar Perfil</a></li>
                                 <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item text-light" href="#">Log-out</a></li>
+                                <li><a class="dropdown-item text-light" href="<?=URL_BASE.'logout.php'?>">Log-out</a></li>
                             </ul>
                         </li>
                     </ul>
