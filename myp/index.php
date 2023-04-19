@@ -170,13 +170,15 @@ require_once('../protect.php');
                         $nome = $res[$i]['nome'];
                         $perfil = $res[$i]['foto'];
                         $bio = $res[$i]['bio'];
+                        $tel = $res[$i]['whatsapp'];
+                        $ddd = $res[$i]['DDD'];
                         ?>
                             <div class="card" style="width: 18rem;">
                                 <img src="<?=ASSETS."imgs/convertidas/$perfil"?>" class="card-img-top" alt="Foto de Usuário do Cliente">
                                 <div class="card-body">
                                     <h5 class="card-title"><?=$nome?></h5>
                                     <p class="card-text"><?=$bio?></p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <a href="https://api.whatsapp.com/send?phone=<?=$ddd.$tel?>&text=Ol%C3%A1,%20Mundo" target="_blank" class="btn btn-success w-100">WhatsApp</a>
                                 </div>
                             </div>
                         <?php
