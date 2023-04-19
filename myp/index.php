@@ -136,7 +136,7 @@ require_once('../protect.php');
             </div>
         </div>
     </section>
-    <section class="mx-3">
+    <section class="mx-3 mb-3">
         <div class="d-flex flex-wrap">
             <div class="w-50" style="padding: 80px 0px 0px 50px">
                 <div class="pb-4">
@@ -153,6 +153,11 @@ require_once('../protect.php');
             <div class="w-50 text-center">
                 <img src="<?=ASSETS.'imgs/convertidas/orai_pelos_outros.webp'?>" alt="Imagem da Bíblia Sagrada" style="border: 7px solid #000; border-radius: 2%">
             </div>
+        </div>
+    </section>
+    <section class="py-5 px-5 bg-dark text-light">
+        <div class="">
+            <h2 class="cookie size-50">Pastores & Pastoras</h2>
         </div>
     </section>
 </body>
