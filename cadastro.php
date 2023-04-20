@@ -54,14 +54,14 @@ require_once('config.php');
                 <div class="row mb-3">
                     <div class="col">
                         <div class="form-floating">
-                            <input type="number" name="phone" id="phone" class="form-control" placeholder="Seu telefone">
+                            <input type="text" name="phone" id="phone" class="form-control" placeholder="Seu telefone">
                             <label for="phone">Seu Telefone/WhatsApp</label>
                         </div>
                     </div>
                 </div>
                 <div class="d-flex flex-column">
-                    <button type="submit" name="btnCadastrar" class="btn btn-primary w-25 mb-2">Salvar Cadastro</button>
-                    <a href="<?=URL_BASE.'/index.php'?>">Já tenho uma conta</a>
+                    <button type="submit" name="btnCadastrar" class="btn btn-primary w-50 mb-2">Salvar Cadastro</button>
+                    <a href="<?=URL_BASE.'index.php'?>">Já tenho uma conta</a>
                 </div>
                 <?php
                     if (isset($_POST['btnCadastrar'])) {
@@ -74,14 +74,13 @@ require_once('config.php');
                             echo "Preencha os Dados!";
                         } else {
                             $res = $pdo->preapre("INSERT INTO cliente SET nome = :nome, bio = :bio, email = :email, senha = :senha, whatsapp = :whatsapp, DDD = :ddd");
-                            $res->bindValue(':bio', '$bio')
+                            $res->bindValue(':nome', $nome);
+                            $res->bindValue(':bio', $bio);
                             $res->bindValue(':email', $email);
                             $res->bindValue(':senha', $senha);
                             $res->bindValue(':whatsapp', $whats);
-                            if ($res->execute()) {
-                                echo "Cadastro feito com Sucesso!";
-                                echo "<a href='index.php' target='_self'>Logar-se</a>";
-                            }
+                            $res->bindValue(':ddd', '55');
+                            $res->execute();
                         }
                     }
                 ?>
