@@ -38,6 +38,14 @@ require_once('config.php');
                 <div class="row mb-3">
                     <div class="col">
                         <div class="form-floating">
+                            <textarea name="bio" rows="12" cols="80" placeholder="Sua Biograifa" class="form-control"></textarea>
+                            <label for="bio">Biograifa</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="form-floating">
                             <input type="password" name="password" id="password" class="form-control" placeholder="Sua senha de acesso">
                             <label for="password">Sua senha de Acesso</label>
                         </div>
@@ -58,20 +66,21 @@ require_once('config.php');
                 <?php
                     if (isset($_POST['btnCadastrar'])) {
                         $nome = addslashes($_POST['nome']);
+                        $bio = addslashes($_POST['bio']);
                         $email = addslashes($_POST['email']);
                         $senha = addslashes($_POST['passoword']);
                         $whats = addslashes($_POST['phone']);
                         if (empty($nome) && empty($email) && empty($senha) && empty($whats)) {
                             echo "Preencha os Dados!";
                         } else {
-                            $res = $pdo->preapre("INSERT INTO cliente SET nome = :nome, email = :email, senha = :senha, whatsapp = :whatsapp, DDD = :ddd");
-                            $res->bindValue(':nome', $nome);
+                            $res = $pdo->preapre("INSERT INTO cliente SET nome = :nome, bio = :bio, email = :email, senha = :senha, whatsapp = :whatsapp, DDD = :ddd");
+                            $res->bindValue(':bio', '$bio')
                             $res->bindValue(':email', $email);
                             $res->bindValue(':senha', $senha);
                             $res->bindValue(':whatsapp', $whats);
                             if ($res->execute()) {
                                 echo "Cadastro feito com Sucesso!";
-                                echo "<a href='index.php'>Logar-se</a>";
+                                echo "<a href='index.php' target='_self'>Logar-se</a>";
                             }
                         }
                     }
