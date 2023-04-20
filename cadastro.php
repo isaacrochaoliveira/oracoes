@@ -17,7 +17,7 @@ require_once('config.php');
     </head>
     <body class="bg-dark">
         <div class="bg-white w-50 mx-auto my-5 py-3">
-            <form class="mx-5" action="index.html" method="post">
+            <form class="mx-5" action="" method="post">
                 <h1 class="text-center py-2 cookie">Faça seu cadastro</h1>
                 <div class="row mb-3">
                     <div class="col">
@@ -68,19 +68,22 @@ require_once('config.php');
                         $nome = addslashes($_POST['nome']);
                         $bio = addslashes($_POST['bio']);
                         $email = addslashes($_POST['email']);
-                        $senha = addslashes($_POST['passoword']);
+                        $senha = addslashes($_POST['password']);
                         $whats = addslashes($_POST['phone']);
                         if (empty($nome) && empty($email) && empty($senha) && empty($whats)) {
                             echo "Preencha os Dados!";
                         } else {
-                            $res = $pdo->preapre("INSERT INTO cliente SET nome = :nome, bio = :bio, email = :email, senha = :senha, whatsapp = :whatsapp, DDD = :ddd");
+                            $res = $pdo->prepare("INSERT INTO cliente SET nome = :nome, bio = :bio, email = :email, senha = :senha, whatsapp = :whatsapp, DDD = :ddd");
                             $res->bindValue(':nome', $nome);
                             $res->bindValue(':bio', $bio);
                             $res->bindValue(':email', $email);
                             $res->bindValue(':senha', $senha);
                             $res->bindValue(':whatsapp', $whats);
                             $res->bindValue(':ddd', '55');
-                            $res->execute();
+                            if ($res->execute()) {
+                                echo "<a href='index.php' target='_self'>Logar-se</a>";
+                            }
+
                         }
                     }
                 ?>
