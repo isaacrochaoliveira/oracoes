@@ -55,6 +55,27 @@ require_once('config.php');
                     <button type="submit" name="btnCadastrar" class="btn btn-primary w-25 mb-2">Salvar Cadastro</button>
                     <a href="<?=URL_BASE.'/index.php'?>">Já tenho uma conta</a>
                 </div>
+                <?php
+                    if (isset($_POST['btnCadastrar'])) {
+                        $nome = addslashes($_POST['nome']);
+                        $email = addslashes($_POST['email']);
+                        $senha = addslashes($_POST['passoword']);
+                        $whats = addslashes($_POST['phone']);
+                        if (empty($nome) && empty($email) && empty($senha) && empty($whats)) {
+                            echo "Preencha os Dados!";
+                        } else {
+                            $res = $pdo->preapre("INSERT INTO cliente SET nome = :nome, email = :email, senha = :senha, whatsapp = :whatsapp, DDD = :ddd");
+                            $res->bindValue(':nome', $nome);
+                            $res->bindValue(':email', $email);
+                            $res->bindValue(':senha', $senha);
+                            $res->bindValue(':whatsapp', $whats);
+                            if ($res->execute()) {
+                                echo "Cadastro feito com Sucesso!";
+                                echo "<a href='index.php'>Logar-se</a>";
+                            }
+                        }
+                    }
+                ?>
             </form>
         </div>
     </body>
