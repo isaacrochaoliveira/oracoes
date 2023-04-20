@@ -1,6 +1,7 @@
 <?php
 
 require_once('conexao.php');
+require_once('config.php');
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +15,47 @@ require_once('conexao.php');
         <link rel="stylesheet" href="assets/css/global.css">
         <title>Cadastro</title>
     </head>
-    <body>
-
+    <body class="bg-dark">
+        <div class="bg-white w-50 mx-auto my-5 py-3">
+            <form class="mx-5" action="index.html" method="post">
+                <h1 class="text-center py-2 cookie">Faça seu cadastro</h1>
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="text" name="nome" id="nome" placeholder="Informe seu nome" class="form-control">
+                            <label for="nome">Nome</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Seu E-mail de acesso">
+                            <label for="email">Seu E-mail de Login</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Sua senha de acesso">
+                            <label for="password">Sua senha de Acesso</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="number" name="phone" id="phone" class="form-control" placeholder="Seu telefone">
+                            <label for="phone">Seu Telefone/WhatsApp</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column">
+                    <button type="submit" name="btnCadastrar" class="btn btn-primary w-25 mb-2">Salvar Cadastro</button>
+                    <a href="<?=URL_BASE.'/index.php'?>">Já tenho uma conta</a>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
